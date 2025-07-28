@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Darius' Projects</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <video id="relapseVideo" class="bg-video" autoplay muted loop playsinline>
+  <source src="sadloop.mp4" type="video/mp4" />
+</video>
+
+    <div class="music-banner">
+  <audio id="bgMusic" autoplay loop muted>
+    <source src="Multo.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+</div>
+
+
+    <nav>
+      <ul class="navbar">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <h1>Darius' Websites</h1>
+      <p class="intro">
+        A growing hub of side projects, bots, and websites from your favorite
+        SHS hustler.
+      </p>
+      <button class="theme-btn" onclick="toggleTheme()">
+        Toggle Dark/Light Mode
+      </button>
+    </header>
+
+    <section id="about">
+      <h2>👋 About Me</h2>
+      <p id="typewriter"></p>
+    </section>
+
+<section id="projects">
+  <h2>🚀 Featured Projects</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="card-content">
+        <h3>📅 Reminder Bot 1</h3>
+        <p>A deadline-tracking tool built for people who forget fast (👀 me too).</p>
+      </div>
+      <div class="card-footer">
+        <a href="https://gmail-reminder-bot-1.onrender.com/" target="_blank">Visit →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h3>📘 Study Tracker</h3>
+        <p>Gamify your study sessions and track how productive you *actually* are.</p>
+      </div>
+      <div class="card-footer">
+        <a href="#">Coming Soon</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h3>📈 Portfolio Dashboard</h3>
+        <p>A visual dashboard of all your growth metrics and goal streaks.</p>
+      </div>
+      <div class="card-footer">
+        <a href="#">In Dev</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="relapse-section">
+  <button id="relapseBtn" class="relapse-btn">Samahan mo 'ko mag-relapse 😔</button>
+<button id="snapOutBtn" class="snapout-btn hidden">Tama na pre, mahal ka pa nun 😭</button>
+
+<div id="recoveryOverlay" class="recovery-message hidden">
+  <h1>“Balang araw makakalaya rin tayo…”</h1>
+</div>
+
+  <div class="relapse-image-card hidden" id="relapseCard">
+    <div class="relapse-overlay">
+  <p class="relapse-quote-text" id="quoteDisplay"></p>
+</div>
+
+    </div>
+  </div>
+</section>
+
+        <button class="contact-btn" onclick="openModal()">💬 Contact Me</button>
+
+<!-- Hidden audio element -->
+<audio id="relapseMusic" loop>
+  <source src="Multo.mp3" type="audio/mpeg" />
+</audio>
+
+
+
+
+
+    <div class="modal" id="contactModal">
+      <div class="modal-content">
+        <h2>Contact Me</h2>
+        <form action="https://formsubmit.io/send/your@email.com" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            placeholder="What's up?"
+            rows="4"
+            required
+          ></textarea>
+          <input
+            name="_redirect"
+            type="hidden"
+            value="https://yourdomain.com/thanks.html"
+          />
+          <button type="submit">Send 🚀</button>
+        </form>
+      </div>
+    </div>
+
+    <footer id="contact">
+      <p>© 2025 Darius Charles. Built with grind, love, and VS Code.</p>
+    </footer>
+
+
+
+    <script src="assets/main.js"></script>
+<div id="memoryChatContainer" class="memory-chat-container"></div>
+
+
+
+  </body>
+</html>
