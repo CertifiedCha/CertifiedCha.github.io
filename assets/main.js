@@ -64,12 +64,14 @@ window.addEventListener("DOMContentLoaded", () => {
 
 let memoryMessages = [];
 
-fetch('memoryMessages.json')
+fetch('assets/memoryMessages.json')
   .then(response => response.json())
   .then(data => {
     memoryMessages = data;
     console.log("Loaded messages:", memoryMessages);
-  });
+  })
+  .catch(error => console.error("Failed to load memoryMessages:", error));
+
 
 
 
@@ -171,4 +173,5 @@ fetch('memoryMessages.json')
     });
   });
 });
+
 
