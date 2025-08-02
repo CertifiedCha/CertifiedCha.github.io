@@ -62,80 +62,15 @@ window.addEventListener("DOMContentLoaded", () => {
     '“Bawal na ba?”'
   ];
 
-const memoryMessages = [
-  // SHORT / SWEET  
-  "Ingat ka palagi ha? Kahit wala na ako sa tabi mo. 🥺",
-  "I miss you. Pero I know, dapat na kitang pakawalan.",
-  "Tulog ka na? Sana panaginipan mo ko 😴",
-  "Good night. I'll always care, kahit hindi mo na maramdaman.",
-  "Gusto ko lang marinig mo: I'm proud of you.",
-  "Kumain ka na ba? Sana oo.",
-  "I hope you're sleeping well tonight, love.",
-  "Alagaan mo sarili mo, please. Kung ayaw mo para sa'yo, gawin mo para sa akin.",
-  "Kahit di na tayo nag-uusap, iniisip pa rin kita.",
-  "Kung okay ka na, masaya na ko. Yun lang.",
-  "Ingat ka lagi, love. 💙",
-  "Good night, sweet dreams. 😘",
-  "Namimiss na kita kahit kahapon lang tayo nag-usap 😢",
-  "Kung may problema ka, nandito lang ako, okay?",
-  "Alagaan mo sarili mo, please. 😔",
-  "Don't overthink too much... I'm here 🫶",
-  "Tulog ka na? Dream of me, okay? 😴",
-  "I know you're tired... I'm proud of you 🥹",
-  "I’m so lucky I met someone like you 🥺",
-  "I’m just one message away, kahit anong oras.",
-  "Kahit 'di tayo magkausap, iniisip pa rin kita.",
-  "Gusto ko lang sabihin, I'm really grateful for you.",
-  "Kahit gising ako hanggang 3AM, basta ikaw kausap, okay lang.",
-  "I hope you’re doing okay, kahit wala na tayo masyado usap...",
-  "Miss na miss na kita, sobra.",
-  "You deserve the kind of love na never ka ipagpapalit.",
-  "Sana ikaw pa rin... sa dulo.",
-  "Basta tandaan mo: hindi ka nag-iisa.",
-  "Naalala kita kanina, out of nowhere.",
-  "You mean more to me than you'll ever know.",
-  "I reread our old convos kanina... ang sakit pero ang saya rin.",
-  "Your smile still lingers in my mind 😔",
-  "I hope you’re taking care of yourself kahit wala na ko diyan.",
-  "You’re still my safe place kahit hindi mo alam.",
-  "Ang tahimik ng gabi... pero ikaw laman ng isip ko.",
-  "Good morning, sunshine ☀️ Just wanted to say you’re enough.",
-  "Naiiyak ako minsan kasi sobrang thankful ako sa 'yo.",
-  "I loved you then, I love you still. Always have. Always will.",
-  "Di mo man ako marinig ngayon... pero mahal pa rin kita.",
-  "Sana balang araw, mapatawad mo rin sarili mo.",
-  "Kaya mo yan, love. Isa-isa lang. I believe in you.",
-  "Yakapin mo sarili mo para sa’kin ngayon, please.",
-  "You were my favorite part of every day. 🕊️",
-  "Salamat sa lahat. Kahit ngayon, andito ka pa rin sa puso ko.",
+let memoryMessages = [];
 
+fetch('memoryMessages.json')
+  .then(response => response.json())
+  .then(data => {
+    memoryMessages = data;
+    console.log("Loaded messages:", memoryMessages);
+  });
 
-  // MEDIUM  
-  "Napansin mo ba? Mas lalo akong tumahimik. Kasi baka pag nagsalita pa ako, ikaw ang lalabas sa bibig ko.",
-  "Hindi ko alam paano ko nalagpasan 'tong gabi na ‘to... pero nandito pa rin ako. Iniisip ka.",
-  "Sabi nila time heals all... pero bakit hanggang ngayon, ikaw pa rin laman ng mga alaala ko?",
-  "Hindi ko na alam kung dapat pa kitang kausapin. Pero araw-araw, umaasa pa rin akong ikaw yung unang magme-message.",
-  "Ang hirap magpanggap na okay lang ako... lalo na pag ikaw yung iniwasan ko, pero ikaw rin yung gusto kong balikan.",
-  "Kung pwede lang balikan yung mga panahong masaya pa tayo, babalik ako kahit masaktan ulit.",
-
-  // LONG / DEEP  
-  "Hey... I know we don't talk anymore, but I still check your socials sometimes. Just to see if you're smiling. Just to make sure you're okay. I hope you are.",
-  "I never hated you. I was just hurt. Kasi I gave my all, and maybe... you just weren't ready to receive that kind of love.",
-  "There are nights when I still read our old messages. Laughing at the jokes, crying at the promises. Sometimes I wonder if you do too.",
-  "You meant the world to me. And maybe I never told you enough. Or maybe I did, but you never believed it. I still do, though.",
-  "I'm slowly healing. But there are still days I wish I could go back to the moment I first held your hand. Just to hold it a little longer.",
-  "I remember everything — your laugh, your mood swings, the way you said my name when you were sleepy. And I miss it all. Every. Single. Bit.",
-  "Sometimes, I pretend you're still beside me. I even whisper good night, hoping the wind brings it to you somehow.",
-  "If this message ever reached you, I just want you to know: I loved you in the quietest, loudest, most painful way possible. And I'd do it again.",
-  "You broke me without meaning to... and I healed by pretending you still cared.",
-  "They said ‘move on,’ but how do you unlove someone who became your whole reason to wake up every day?",
-  "Maybe in another lifetime, you’ll choose me without hesitation. Without doubt. Without needing to lose me first.",
-  "I loved you hard. The kind of love you don’t unlearn. The kind that lingers in silence.",
-  "You weren't just a chapter. You were the whole book... and I still reread every page in my head every night.",
-  "I hope you’re happy now. And if ever life brings you pain, I hope you remember I once tried to protect you from all of it.",
-  "I guess this is goodbye… not because I stopped loving you, but because you stopped needing me.",
-  "One day, you’ll find these messages floating down… and you’ll know they came from a place that used to call you home."
-];
 
 
   let currentIndex = 0;
@@ -236,3 +171,4 @@ const memoryMessages = [
     });
   });
 });
+
