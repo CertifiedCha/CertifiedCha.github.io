@@ -27,40 +27,9 @@ html {
 }
 
 body {
-  background: #fefefe;
-  transition: background 0.5s ease;
-}
-
-body.dark-mode {
-  background: #222;
-}
-
-.lamp-container {
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-#lampLight {
-  transition: fill 0.4s ease;
-}
-
-body.dark-mode #lampLight {
-  fill: #555;
-}
-
-/* Cord idle sway */
-@keyframes sway {
-  0%, 100% { transform: rotate(-3deg); }
-  50% { transform: rotate(3deg); }
-}
-
-#lampCord, #pullHandle {
-  transform-origin: top center;
-  animation: sway 3s ease-in-out infinite;
-}
-
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 2rem;
 }
 
 nav {
@@ -545,6 +514,4 @@ footer {
     opacity: 0;
   }
 }
-
-
 
