@@ -172,6 +172,22 @@ fetch('assets/memoryMessages.json')
       ease: "power2.out",
     });
   });
+  const pullHandle = document.getElementById('pullHandle');
+let isDark = false;
+
+pullHandle.addEventListener('click', () => {
+  gsap.to("#pullHandle", { y: 30, duration: 0.2, ease: "power1.in" });
+  gsap.to("#lampCord", { y: 30, duration: 0.2, ease: "power1.in" });
+
+  setTimeout(() => {
+    document.body.classList.toggle("dark-mode");
+    isDark = !isDark;
+    gsap.to("#pullHandle", { y: 0, duration: 0.4, ease: "bounce.out" });
+    gsap.to("#lampCord", { y: 0, duration: 0.4, ease: "bounce.out" });
+  }, 200);
 });
+
+});
+
 
 
